@@ -1,0 +1,86 @@
+:root {
+  --active-font: #509ecf;
+  --inactive-font: #000000;
+  --primary-font: #000;
+  --cta-primary: #509ecf;
+  --cta-secondary: #509ecf;
+  --dark-primary: #FEFEFE;
+  --dark-secondary: #ffffff;
+  --dark-menu: #509ecf;
+}
+
+body {
+  background-color: var(--dark-primary);
+  color: var(--primary-font);
+}
+
+.gridContent {
+  display: grid;
+  grid-template-columns: max-content 4fr;
+  min-height: 100vh;
+  grid-template-areas: "side body";
+}
+
+.sideNav {
+  grid-area: side;
+  padding: 1rem 3rem;
+}
+
+.videoListing {
+  grid-area: body;
+  padding: 1rem 3rem;
+}
+
+.videoContainer {
+  display: flex;
+  gap: clamp(2rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.listItems {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  color: var(--inactive-font);
+  text-decoration: none;
+}
+
+.active {
+  color: var(--active-font);
+  background: transparent;
+}
+
+
+@media screen and (max-width: 860px) {
+  .videoContainer {
+    flex-direction: column;
+
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .videoListing {
+    padding: 0;
+  }
+
+  .videoListing h1 {
+    display: none;
+  }
+
+  .videoContainer {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .gridContent {
+    grid-template-columns: 1fr;
+    grid-template-areas: "body";
+  }
+
+  .sideNav {
+    display: none;
+  }
+}

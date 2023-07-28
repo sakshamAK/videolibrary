@@ -1,0 +1,10 @@
+.search-explore {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    border: none;
+    box-shadow: 1px 1px 3px lightgray;
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    text-align: center;
+}

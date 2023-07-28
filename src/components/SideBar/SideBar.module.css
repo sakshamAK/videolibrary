@@ -1,0 +1,44 @@
+.sideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--dark-secondary);
+    color: var(--inactive-font);
+    padding-top: 5rem;
+}
+
+.sideContainer li {
+    list-style-type: none;
+}
+
+.listItems {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    color: var(--inactive-font);
+    text-decoration: none;
+}
+
+.active {
+    color: var(--active-font);
+    background: transparent;
+}
+
+@media screen and (max-width: 630px) {  
+    .sideContainer {
+      flex-direction: row;
+      position: fixed;
+      width: 100%;
+      justify-content: space-around;
+      padding: 1rem;
+      bottom: 0;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .sideContainer li a h3 {
+        display: none;
+    }
+  }
+  
